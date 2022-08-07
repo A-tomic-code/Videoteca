@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  width: 100%;
+  height: 10%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap:2%;
+
+  width: 100%;
+  height: 90%;
+
+  padding: 3%;
+}
+
+.card{
+  box-shadow: 2px 2px 5px #fff7;
+  transition: 0.5s;
+}
+.card:hover{
+  transform: translateY(-2%);
+  box-shadow: 0px 2px 20px #fff7;
+}
+
+.form {
+  /* border: 2px solid fuchsia; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3. 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form_div{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-around;
+  width: 90%;
+}
+
+.form__pelicula{
+  grid-template-areas:
+    'titulo productor idioma'
+    'nacionalidad anyo gionista'
+    'imagen imagen imagen'
+    'genero genero genero'
+}
+.form__persona{
+  grid-template-areas:
+    'nombre edad genero'
+    'peso altura ojos'
+    'raza retirado nacionalidad'
+    'imagen imagen imagen'
+    'checkbox checkbox checkbox'
+}.form__pelicula--imagen,.form__pelicula--genero, .form__director--imagen{
+ width: 97%;
+  grid-area: imagen;
+}.form__pelicula--genero{
+  grid-area: genero;
+}
+
+.registro{
+  width:80%;
+}
+
+.checkbox_wide{
+  grid-area: checkbox;
+}
